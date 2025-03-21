@@ -63,14 +63,20 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    padding: 20px;
+    padding: 30px; /* Incrementar el padding */
     background-color: white;
+font-size: 1.1rem; /* Aumentar el tamaño del texto */
+    line-height: 1.5; /* Mejorar la legibilidad */
 }
 
 .sobre-proyecto, .faq, .map-container {
     background: white;
     padding: 15px;
     border-radius: 8px;
+}
+
+.info > * {
+    padding: 10px; /* Añadir espacio interno a los elementos */
 }
 
 .map-container {

@@ -19,7 +19,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .header-content h1 {
@@ -53,8 +53,8 @@ header {
 
 /* Estilo específico para imágenes con alt="github" */
 img[alt="github"] {
-    width: 200px;  /* Tamaño más pequeño */
-    height: 200px; /* Tamaño más pequeño */
+    width: 300px;  /* Tamaño más pequeño */
+    height: 300px; /* Tamaño más pequeño */
     max-width: none; /* Anula el max-width general */
 }
 

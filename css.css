@@ -1,0 +1,84 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ESTILO GENERAL */
+body {
+    background-color: #f4f4f4;
+}
+
+/* HEADER - OCUPA 100% DE LA PANTALLA */
+header {
+    background: url('IMG/header.jpg') no-repeat center center/cover;
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+}
+
+/* PROYECTOS */
+.proyectos {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.grid-item img {
+    width: 80px;  /* Tamaño reducido */
+    height: 80px; /* Tamaño reducido */
+    max-width: 10%;
+}
+
+/* FEEDBACK */
+.feedback {
+    background-color: #4ea0a8;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* INFORMACIÓN */
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+}
+
+.column {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    flex-direction: column;
+}
+.map {
+    width: 100%;
+    height: 400px;
+    border: 0; /* Quita el borde del iframe */
+    border-radius: 10px; /* Bordes redondeados */
+}

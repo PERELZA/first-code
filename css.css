@@ -61,11 +61,11 @@ header {
 /* INFORMACIÓN */
 .info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr; /* Dos columnas: izquierda más ancha, derecha más estrecha */
     gap: 20px;
     padding: 30px; /* Incrementar el padding */
     background-color: white;
-font-size: 1rem; /* Aumentar el tamaño del texto */
+    font-size: 1rem; /* Aumentar el tamaño del texto */
     line-height: 1.5; /* Mejorar la legibilidad */
 }
 
@@ -75,13 +75,19 @@ font-size: 1rem; /* Aumentar el tamaño del texto */
     border-radius: 8px;
 }
 
+.sobre-proyecto, .faq {
+    grid-column: 1; /* Ambas estarán en la primera columna */
+}
+
+.map-container {
+    grid-column: 2; /* El mapa estará en la segunda columna */
+}
+
 .sobre-proyecto {
-    grid-column: span 2; /* Ocupa el espacio de dos columnas */
     margin-bottom: 10px; /* Reduce el margen inferior */
 }
 
 .faq {
-    grid-column: span 1; /* Mantiene su tamaño original */
     margin-top: 10px; /* Reduce el margen superior */
 }
 
@@ -109,18 +115,44 @@ font-size: 1rem; /* Aumentar el tamaño del texto */
 
 /* FOOTER */
 footer {
-    background-color: #333;
+    background-color: #6a6767;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
     margin-top: 20px;
+    font-size: 0.9rem;
 }
 
-.footer-links {
+.footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.footer-left {
+    text-align: left;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.footer-right {
+    display: flex; /* Cambia a diseño de columnas */
+    justify-content: space-between; /* Espacio entre las columnas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    flex: 1;
+}
+
+.footer-support, .footer-designer {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    padding: 0 10px; /* Espaciado interno opcional */
+}
+
+.footer-right p, .footer-left p {
+    margin: 5px 0;
 }
 
 /* RESPONSIVE */
@@ -135,4 +167,14 @@ footer {
     .sobre-proyecto, .faq, .map-container {
         grid-column: span 1; /* Asegura que cada elemento ocupe toda la fila */
     }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-left, .footer-right {
+        text-align: center;
+        padding: 10px 0;
+    }
 }
+

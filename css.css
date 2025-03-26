@@ -75,6 +75,16 @@ font-size: 1rem; /* Aumentar el tamaño del texto */
     border-radius: 8px;
 }
 
+.sobre-proyecto {
+    grid-column: span 2; /* Ocupa el espacio de dos columnas */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+}
+
+.faq {
+    grid-column: span 1; /* Mantiene su tamaño original */
+    margin-top: 10px; /* Reduce el margen superior */
+}
+
 .info > * {
     padding: 10px; /* Añadir espacio interno a los elementos */
 }
@@ -88,6 +98,13 @@ font-size: 1rem; /* Aumentar el tamaño del texto */
     height: 250px;
     border: 0;
     border-radius: 10px;
+}
+
+/* Quitar los puntos de la lista en Preguntas frecuentes */
+.faq ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Opcional: elimina el padding por defecto */
+    margin: 0; /* Opcional: elimina el margen por defecto */
 }
 
 /* FOOTER */
@@ -112,6 +129,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
     .info {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    .sobre-proyecto, .faq, .map-container {
+        grid-column: span 1; /* Asegura que cada elemento ocupe toda la fila */
     }
 }

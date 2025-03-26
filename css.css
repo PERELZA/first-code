@@ -160,6 +160,9 @@ footer {
     color: white; /* Texto blanco */
     text-align: center; /* Centra el texto */
     padding: 10px; /* Espaciado interno */
+    width: 100vw; /* Asegura que ocupe todo el ancho de la ventana */
+    margin: 0; /* Elimina márgenes */
+    position: relative; /* Asegura que el fondo se extienda correctamente */
 }
 
 /* RESPONSIVE - Ajustes para pantallas pequeñas */
